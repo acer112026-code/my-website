@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inter-Collegiate Function Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #babcc2, #4e5250);
+            margin: 0;
+            padding: 0;
+        }                                                                                                      
+
+        .container {
+            width: 50%;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4e73df;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2e59d9;
+        }
+
+        .reset-btn {
+            background-color: #e74a3b;
+            margin-top: 10px;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+    
+</head>
+
+<body>
+<form onsubmit="registerMsg()">
+    <div class="container">
+        <h1>Inter-Collegiate Function Registration Form</h1>
+
+       
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>College Name:</label>
+            <input type="text" placeholder="Enter your college name" required>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Phone Number:</label>
+            <input type="number" placeholder="Enter your phone number" required>
+
+            <label>Gender:</label><br>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+            <br><br>
+
+            <label>Event Participating In:</label>
+            <select required>
+                <option value="">--Select Event--</option>
+                <option>Dance</option>
+                <option>Music</option>
+                <option>Drama</option>
+                <option>Technical Quiz</option>
+                <option>Debate</option>
+            </select>
+
+            <label>Accommodation Required:</label><br>
+            <input type="checkbox"> Yes
+            <br><br>
+
+            <label>Address:</label>
+            <textarea rows="3" placeholder="Enter your address"></textarea>
+
+            <button type="submit" class="btn">Register</button>
+            <button type="reset" class="btn reset-btn">Reset</button>
+        
+    </div>
+</form>
+<div class="modal" id="popup">
+    <div class="modal-box">
+        <h2>Registration Details</h2>
+        <div class="details" id="popupContent"></div>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+<script>
+        function registerMsg(){
+            alert("Registered Successfully");
+        }
+    </script>
+</body>
+</html>
